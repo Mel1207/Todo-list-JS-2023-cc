@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/vars.css">
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/utility-class.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/queries.css">
+  <title>Todo List</title>
+</head>
+<body>
+  <!-- <div class="message-box">
+    <div class="alert-message success">Todo Added</div>
+    <div class="alert-message error">Todo Removed</div>
+  </div> -->
+  <!-- DASHBOARD HEADER -->
+  <div class="dashboard-header">
+    <div class="container">
+      <div class="dashboard-greetings">
+        <h1>My Todo List</h1>
+        <p>October 22, 2023</p>
+      </div>
+      <form class="dashboard-input" id="form">
+        <input type="text" placeholder="What is your todo today ?" class="todo-input" id="todo-input">
+        <button class="btn btn-primary" role="button">Add todo</button>
+      </form>
+    </div>
+  </div>
+  <!-- DASHBOARD BODY -->
+  <div class="dashboard-body">
+    <div class="container">
+      <div class="dashboard-actions">
+        <div class="filter-items">
+          <div class="filter">All Todo</div>
+          <div class="filter">On-going</div>
+          <div class="filter">Closed</div>
+        </div>
+        <a class="btn-link">
+          Clear all 
+          <img src="./img/icon-delete.svg" alt="delete">
+        </a>
+      </div>
+      <div class="table">
+        <ul class="todo-list" id="todo-list">
+          <li class="todo">
+            <p>Code in the morning</p>
+            <div class="todo-actions">
+              <span class="status status-closed">Closed</span>
+              <a class="action action-edit">Edit
+                <img src="./img/icon-edit.svg" alt="Edit">
+              </a>
+              <a class="action action-delete">Delete 
+                <img src="./img/icon-delete-red.svg" alt="Delete">
+              </a>
+            </div>
+          </li>
+          <li class="todo">
+            <p>Code in the morning</p>
+            <div class="todo-actions">
+              <span class="status status-ongoing">On-going</span>
+              <a class="action action-edit">Edit
+                <img src="./img/icon-edit.svg" alt="Edit">
+              </a>
+              <a class="action action-delete">Delete 
+                <img src="./img/icon-delete-red.svg" alt="Delete">
+              </a>
+            </div>
+          </li>
+          <!-- <li class="todo">
+            <p>Code in the morning</p>
+            <div class="todo-actions">
+              <span class="status status-ongoing">On-going</span>
+              <a class="action action-edit">Edit
+                <img src="./img/icon-edit.svg" alt="Edit">
+              </a>
+              <a class="action action-delete">Delete 
+                <img src="./img/icon-delete-red.svg" alt="Delete">
+              </a>
+            </div>
+          </li>
+          <li class="todo">
+            <p>Code in the morning</p>
+            <div class="todo-actions">
+              <span class="status status-ongoing">On-going</span>
+              <a class="action action-edit">Edit
+                <img src="./img/icon-edit.svg" alt="Edit">
+              </a>
+              <a class="action action-delete">Delete 
+                <img src="./img/icon-delete-red.svg" alt="Delete">
+              </a>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./app.js"></script>
+</body>
+</html>

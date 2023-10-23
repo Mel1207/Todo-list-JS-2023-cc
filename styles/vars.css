@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* FONT SET */
+  --font-primary: 'Inter', sans-serif;
+
+  /* COLOR SET */
+  --cBlack: #000;
+  --cWhite: #fff;
+  --cBlue: #0C48E2;
+  --cOrange: #FFAC60;
+  --cGray: #EDEDED;
+  --dGray: #7A7A7A;
+  --cGreen: #40CB99;
+  --cRed: #F51A4E;
+}

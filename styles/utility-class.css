@@ -1,0 +1,79 @@
+.btn, button {
+  height: 47px;
+  width: 142px !important;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: var(--font-primary);
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: var(--cOrange);
+  color: var(--cWhite);
+}
+
+.btn-link {
+  color: var(--cBlue);
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.status {
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 50px;
+}
+
+.status-ongoing {
+  background: var(--cGreen);
+  color: var(--cWhite);
+}
+
+.status-closed {
+  background: var(--cGray);
+  color: var(--dGray);
+}
+
+.action {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.action-edit {
+  color: var(--cOrange);
+}
+
+.action-delete {
+  color: var(--cRed);
+}
+
+.alert-message {
+  /* position: r; */
+  /* height: 50px; */
+  padding: 15px 50px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 300px;
+}
+
+.success {
+  background: var(--cGreen);
+  color: #26775A;
+  border-left: 8px solid #26775A;
+}
+
+.error {
+  background: #FFABBF;
+  color: var(--cRed);
+  border-left: 8px solid var(--cRed);
+}

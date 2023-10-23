@@ -1,0 +1,21 @@
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--cBlack);
+  font-family: var(--font-primary);
+}
+
+.container {
+  max-width: 680px;
+  width: 100%;
+  margin: auto;
+  padding: 0 15px;
+}
+
+ul {
+  list-style: none;
+}

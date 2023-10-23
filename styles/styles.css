@@ -1,0 +1,99 @@
+/* DASHBOARD */
+.dashboard-header {
+  height: 315px;
+  width: 100%;
+  background: var(--cBlue);
+  padding-top: 80px;
+}
+
+.dashboard-greetings {
+  color: var(--cWhite);
+}
+
+.dashboard-greetings h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.dashboard-greetings p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.dashboard-input {
+  display: flex;
+  gap: 20px;
+}
+
+.dashboard-input input {
+  height: 47px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: calc(100% - 142px);
+  padding: 0 15px;
+}
+
+.dashboard-input input::placeholder {
+  font-family: var(--font-primary);
+  color: rgba(0, 0, 0, .35);
+}
+
+/* FILTER */
+.filter-items {
+  display: flex;
+  gap: 20px;
+}
+
+.filter {
+  background: var(--cGray);
+  color: var(--dGray);
+  font-size: 12px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* DASHBOARD ACTIONS */
+.dashboard-actions {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 55px 0;
+}
+
+/* TODO LIST */
+.todo-list .todo {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.todo-list .todo:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.todo-list .todo:nth-child(odd) {
+  background: #F3F9FF;
+}
+
+.todo-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ERROR BOX */
+.message-box {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
