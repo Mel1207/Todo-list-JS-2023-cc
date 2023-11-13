@@ -3,8 +3,6 @@ let taskListArr = [];
 const taskForm = document.getElementById("form")
 const taskValue = document.getElementById("todoInput")
 const todoList = document.getElementById("myTodoList") 
-const testBtn = document.querySelector('#testBtn')
-
 
 
 // FUNCTION
@@ -33,31 +31,36 @@ const renderTaskList = () => {
         <a class="action action-edit">Edit
           <img src="./img/icon-edit.svg" alt="Edit">
         </a>
-        <a class="action action-delete" id="deleteTaskBtn">Delete 
+        <a class="action action-delete" id="deleteTaskBtn" onClick="deleteTask(${item.taskId})">Delete 
           <img src="./img/icon-delete-red.svg" alt="Delete">
         </a>
       </div>
     </li>
     `
+    // const deleteBtn = document.querySelector('.action-delete')
+    // deleteBtn.addEventListener('click', deleteTask)
+    // deleteBtn.taskId = item.taskId
   })
 }
 
 const deleteTask = (e) => {
+  // debugger;
+  let index = taskListArr.findIndex(item => item.taskId == e);
+  taskListArr.splice(index, 1);
+  renderTaskList();
+
   // e.target.parentElement.parentElement.remove()
-  // todoList.innerHTML = ""
-  const selectedTodo = e.target.parentElement.parentElement.getAttribute("todo-id")
+  // const selectedTodo = e.target.parentElement.parentElement.getAttribute("todo-id")
+  // taskListArr.splice(selectedTodo - 1, 1)
 
-  taskListArr.filter(item => item.taskId !== selectedTodo)
-
-  console.log(taskListArr)
+  // console.log(taskListArr)
   // renderTaskList()
 }
 
 
 // CALLERS
 taskForm.addEventListener("submit", addTask)
-todoList.addEventListener('click', deleteTask)
-// testBtn.addEventListener('click', checkButtonArr)
+// todoList.addEventListener('click', deleteTask)
 
 
 
