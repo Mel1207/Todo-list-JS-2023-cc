@@ -5,20 +5,8 @@ const taskValue = document.getElementById("todoInput")
 const todoList = document.getElementById("myTodoList") 
 const removeAllTodo = document.querySelector("#clearAll")
 
-// FUNCTION
-const addTask = (e) => {
-  e.preventDefault();
-  // debugger;
-  let taskItem = {
-    taskId: taskListArr.length + 1,
-    taskName: taskValue.value,
-    taskStatus: 'On-going'
-  }
-  taskListArr.push(taskItem);
-  taskValue.value = "";
-  console.log(taskListArr)
-  renderTaskList()
-}
+
+let isLocal = localStorage.getItem("todoTaskList")
 
 const renderTaskList = () => {
   todoList.innerHTML = ""
@@ -38,6 +26,33 @@ const renderTaskList = () => {
     </li>
     `
   })
+}
+
+if(isLocal !== null) {
+  taskListArr = JSON.parse(isLocal);
+  renderTaskList()
+}
+
+// FUNCTION
+const addTask = (e) => {
+  e.preventDefault();
+  // debugger;
+  let taskItem = {
+    taskId: taskListArr.length + 1,
+    taskName: taskValue.value,
+    taskStatus: 'On-going'
+  }
+
+  if(!taskValue.value) {
+    alert('Please add your todo!')
+    return
+  }
+
+  taskListArr.push(taskItem);
+  localStorage.setItem("todoTaskList", JSON.stringify(taskListArr))
+  taskValue.value = "";
+  console.log(taskListArr)
+  renderTaskList()
 }
 
 const deleteTask = (e) => {
