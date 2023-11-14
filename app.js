@@ -28,7 +28,7 @@ const renderTaskList = () => {
       <p>${item.taskName}</p>
       <div class="todo-actions">
         <span class="status status-ongoing">${item.taskStatus}</span>
-        <a class="action action-edit">Edit
+        <a class="action action-edit" onClick="editTask(${item.taskId})">Edit
           <img src="./img/icon-edit.svg" alt="Edit">
         </a>
         <a class="action action-delete" id="deleteTaskBtn" onClick="deleteTask(${item.taskId})">Delete 
@@ -37,30 +37,25 @@ const renderTaskList = () => {
       </div>
     </li>
     `
-    // const deleteBtn = document.querySelector('.action-delete')
-    // deleteBtn.addEventListener('click', deleteTask)
-    // deleteBtn.taskId = item.taskId
   })
 }
 
 const deleteTask = (e) => {
   // debugger;
   let index = taskListArr.findIndex(item => item.taskId == e);
+  console.log(index)
   taskListArr.splice(index, 1);
   renderTaskList();
+}
 
-  // e.target.parentElement.parentElement.remove()
-  // const selectedTodo = e.target.parentElement.parentElement.getAttribute("todo-id")
-  // taskListArr.splice(selectedTodo - 1, 1)
-
-  // console.log(taskListArr)
-  // renderTaskList()
+const editTask = (e) => {
+  let taskObj = taskListArr.find(item => item.taskId == e)
+  taskValue.value = taskObj.taskName
 }
 
 
 // CALLERS
 taskForm.addEventListener("submit", addTask)
-// todoList.addEventListener('click', deleteTask)
 
 
 
