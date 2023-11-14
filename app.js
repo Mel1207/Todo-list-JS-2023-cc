@@ -3,7 +3,7 @@ let taskListArr = [];
 const taskForm = document.getElementById("form")
 const taskValue = document.getElementById("todoInput")
 const todoList = document.getElementById("myTodoList") 
-
+const removeAllTodo = document.querySelector("#clearAll")
 
 // FUNCTION
 const addTask = (e) => {
@@ -53,9 +53,18 @@ const editTask = (e) => {
   taskValue.value = taskObj.taskName
 }
 
+const removeAllTask = () => {
+  console.log('all task removed')
+  taskListArr.splice(0)
+  renderTaskList()
+}
 
 // CALLERS
 taskForm.addEventListener("submit", addTask)
+removeAllTodo.addEventListener("click", removeAllTask)
+
+
+
 
 
 
